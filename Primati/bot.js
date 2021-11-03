@@ -2,9 +2,14 @@ const TelegramBot = require('node-telegram-bot-api');
 const configurazione = require("../utils/configurazione.json");
 const utilità = require("../utils/utilità")
 
+
+// Gestore delle stampe log su console
 const log = new utilità.log(configurazione);
+
+// Yagop's framework
 const primati = new TelegramBot(configurazione.telegram.token, { filepath: false });
 
+// funzione per set del webhook (telegram)
 module.exports.start = async () => {
     let post_url = `${configurazione.server.url}/${configurazione.server.router}/post`;
     let bot_options = {
@@ -28,6 +33,7 @@ module.exports.log = log;
 
 
 
+// EVENTI
 primati.on("message", async function (message){
     console.log("Ricevuto");
     console.log(message);

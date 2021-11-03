@@ -1,0 +1,22 @@
+{
+    "telegram": {
+        "token": ""
+    },
+    "server": {
+        "url": "",
+        "router": "",
+        "port": -1
+    },
+    "bot": {
+        "admin_id": -1
+    },
+    "directory": {
+
+    },
+    "sviluppo":{
+        "logs": true
+    }
+
+
+
+}
